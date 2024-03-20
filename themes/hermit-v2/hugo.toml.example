@@ -7,6 +7,7 @@
 baseURL = "CHANGE BASE URL"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
+#theme = "hermit-v2"
 
 #[languages]
 #  [languages.en]
@@ -39,8 +40,18 @@ rssLimit = 10
 copyright = "CHANGE ME"
 enableEmoji = true
 
-# googleAnalytics = "UA-123-45"
-# disqusShortname = "CHANGE ME"
+#[services]
+#  [services.disqus]
+#    shortname = ''
+#  [services.googleAnalytics]
+#    id = ''
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]
+
 
 [params.author]
   name = "CHANGE SITE AUTHOR"
@@ -54,6 +65,18 @@ enableEmoji = true
 [taxonomies]
   tag = "tags"
   # Categories are disabled by default.
+  # category = "categories"
+
+# Enable to get proper Mathjax support
+#[markup]
+#  [markup.goldmark]
+#    [markup.goldmark.extensions]
+#      [markup.goldmark.extensions.passthrough]
+#        enable = true
+#        [markup.goldmark.extensions.passthrough.delimiters]
+#          block = [['\[', '\]'], ['$$', '$$']]
+#          inline = [['\(', '\)']]
+
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -82,7 +105,14 @@ enableEmoji = true
   readTimeSeparator = "CHANGE ME READ TIME"
   # legacyLayout = false
   shareSocial = true
-
+  # googleTagManager = "GTM-XXXXXXXX"
+  # tagSymbol = "#"
+  # categorySymbol = "⊲"
+  # pinned = "Pinned Posts"
+  # pinnedSVGname = "pin"
+  # descriptionInPosts= true
+  # initialPublish = "Initally Posted on: "
+  
   [[params.socialLinks]]
     name = "mastodon"
     url = "https://joinmastodon.org/"

@@ -67,8 +67,8 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     url = "https://genserver.social/f1sty"
 
   [[params.socialLinks]]
-    name = "x"
-    url = "https://twitter.com/f1sty"
+    name = "bluesky"
+    url = "https://bsky.app/profile/f1sty.bsky.social"
 
   [[params.socialLinks]]
     name = "github"
@@ -90,3 +90,8 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     name = "books"
     url = "books/"
     weight = 30
+
+  [[menu.main]]
+    name = "help Ukraine"
+    url = "help-ukraine/"
+    weight = 40
